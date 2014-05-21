@@ -11,10 +11,9 @@ install: sudo apt-get install php5-xdebug
 
 script:
    #- sudo apt-get install php5-xdebug
-   - phpunit  --log-junit shippable/testresults/junit.xml tests/calculator.php
-   - phpunit --coverage-xml  shippable/codecoverage/ tests/calculator.php
-  
-#notifications:
+   - phpunit  --log-junit shippable/testresults/junit.xml tests/calculator_test.php
+   - phpunit --coverage-xml  shippable/codecoverage/  tests/calculator_test.php
+   #notifications:
  #  email: false
 
 #before_install:

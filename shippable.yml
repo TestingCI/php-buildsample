@@ -14,7 +14,11 @@ script:
    - phpunit  --log-junit shippable/testresults/junit.xml tests/calculator_test.php
    - phpunit --coverage-xml  shippable/codecoverage/  tests/calculator_test.php
   
+
 matrix:
   include:
    - php: 5.6
-  
+  exclude:
+   - php: 5.4
+notifications:
+  email: false

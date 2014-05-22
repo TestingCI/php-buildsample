@@ -2,6 +2,7 @@ language: php
 
 php: 
   - 5.4
+  - 5.5
 
 before_script: 
   - mkdir -p shippable/codecoverage
@@ -16,8 +17,7 @@ script:
   
 
 matrix:
-  include:
-   - php: 5.3
+  
   exclude:
    - php: 5.4
 notifications:

@@ -16,10 +16,10 @@ script:
    - phpunit --coverage-xml  shippable/codecoverage/  tests/calculator_test.php
   
 
-matrix:
-  include:
-   - php: "5.5"
-  exclude:
-   - php: 5.3
+#matrix:
+  #include:
+   #- php: "5.5"
+  #exclude:
+  # - php: 5.3
 notifications:
   email: false

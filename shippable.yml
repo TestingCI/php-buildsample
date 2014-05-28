@@ -14,13 +14,13 @@ script:
    #- sudo apt-get install php5-xdebug
    - phpunit  --log-junit shippable/testresults/junit.xml tests/calculator_test.php
    - phpunit --coverage-xml  shippable/codecoverage/  tests/calculator_test.php
-  
+   - php -v
 
 matrix:
   include:
    - php: 5.5
    - php: 5.6
-  exclude:
-  - php: 5.3
+  allow_failures:
+   - php: 5.3
 notifications:
   email: false
